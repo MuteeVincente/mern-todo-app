@@ -3,7 +3,16 @@ import {Container} from './styles';
 
 function Todo() {
   return (
-    <Container>Todo Component</Container>
+    <Container>
+      <h2>List of Todos </h2>
+      {/*form component*/}
+      {/*Todo List*/}
+      {/*Key*/}
+      {/*Author*/}
+
+
+
+      </Container>
   )
 }
 
