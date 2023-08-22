@@ -3,6 +3,8 @@ import {Container} from './styles';
 import Form from  '../Form';
 import axios from '../../axios';
 import TodoList from '../../Todolist';
+import Key from '../Key';
+import Author from '../Author'
 
 function Todo() {
   const [input, setInput] = useState('');
@@ -48,7 +50,10 @@ function Todo() {
       {/*Todo List*/}
       <TodoList todos ={todos} fetchData={fetchData}/>
       {/*Key*/}
+
+      <Key/>
       {/*Author*/}
+      <Author/>
 
 
 
