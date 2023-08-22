@@ -2,6 +2,7 @@
   margin: 0;
   padding: 50px;
   background-color: #eee5e2;
+  background-image: linear-gradient(25deg, #9ceb82, #9ab8da, #f371d7);
   font-weight: 500;
   font-size:1.2em;
   height: 100vh;
