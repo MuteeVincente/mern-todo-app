@@ -7,3 +7,12 @@
   font-size:1.2em;
   height: 100vh;
 }
+header{
+  background-color: aliceblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  border: 1px solid rgb(144, 152, 158) ;
+  border-radius: 25px;
+}
