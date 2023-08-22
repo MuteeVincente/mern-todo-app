@@ -1,29 +1,28 @@
 const express = require('express');
 const mongoose = require('mongoose');
-const cors = require('cors');
-require('dotenv').config();
+const Cors = require('cors');
+const dotenv = require('dotenv');
+
+dotenv.config();
 
 // App config
 const app = express();
 
 const port = process.env.PORT || 8000;
 
-const MONGODB_URI = process.env.MONGODB_URI;
+const connectionURL = process.env.MONGODB_URI;
 
 // MiddleWares
 // Convert to Json
 app.use(express.json());
-app.use(cors());
+app.use(Cors());
 
 // DB Config
-mongoose.connect(MONGODB_URI, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
-})
+mongoose.connect(connectionURL)
 .then(() => {
     console.log('Connected to MongoDB');
     app.listen(port, () => {
-        console.log(`Server is listening on port ${port}`);
+        console.log('Running on port: ${port}');
     });
 })
 .catch(error => {
