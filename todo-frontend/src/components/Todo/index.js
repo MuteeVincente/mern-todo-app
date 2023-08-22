@@ -21,7 +21,20 @@ function Todo() {
     fetchData()
   }, [])
 
-  const addTodo =  async () => {
+  const addTodo =  async (e) => {
+    e.preventDefault();
+    if(input.length === 0) return null;
+    await axios.post('/todos',[
+      {
+        ...todos,
+        text: input,
+        completed: false,
+
+      },
+
+    ]);
+    fetchData();
+    setInput("");
     console.log('Todo Added')
   }
   console.log(todos, 'todos')
@@ -29,7 +42,7 @@ function Todo() {
     <Container>
       <h2>List of Todos </h2>
       {/*form component*/}
-      <Form input={input} setInput = {setInput} />
+      <Form input={input} setInput = {setInput}  addTodo={addTodo}/>
       {/*Todo List*/}
       {/*Key*/}
       {/*Author*/}

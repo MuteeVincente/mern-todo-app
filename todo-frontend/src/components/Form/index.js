@@ -1,7 +1,7 @@
 import React from 'react'
 import { FormContainer,Input,Button } from './styles';
 
-export default function Form({input, setInput}) {
+export default function Form({input, setInput,addTodo}) {
   return (
     <FormContainer>
         <Input     
@@ -9,6 +9,6 @@ export default function Form({input, setInput}) {
         type ='text'
         role ='input'
         />
-        <Button type='submit'>Add</Button></FormContainer>
+        <Button type='submit' onClick={(e) => addTodo(e)}>Add</Button></FormContainer>
   )
 }
