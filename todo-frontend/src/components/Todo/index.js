@@ -1,7 +1,9 @@
 import React ,{useEffect, useState} from 'react';
 import {Container} from './styles';
 import Form from  '../Form';
-import axios from '../../axios'
+import axios from '../../axios';
+import TodoList from '../../Todolist';
+
 function Todo() {
   const [input, setInput] = useState('');
   const [todos, setTodos] = useState([]);
@@ -44,6 +46,7 @@ function Todo() {
       {/*form component*/}
       <Form input={input} setInput = {setInput}  addTodo={addTodo}/>
       {/*Todo List*/}
+      <TodoList todos ={todos} fetchData={fetchData}/>
       {/*Key*/}
       {/*Author*/}
 
